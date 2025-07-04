@@ -2558,9 +2558,156 @@ body {
 }
 
 /* サブスクリプションコンテンツエリア */
-.subscription-content {
+.subscription-section {
+    background-color: white;
+    color: #333;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.subscription-section__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.subscription-section__title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+    text-align: center;
+    color: #333;
+}
+
+.subscription-section__content {
     max-width: 1100px;
     margin: 0 auto;
+}
+
+.subscription-section__features {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 107, 107, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(255, 107, 107, 0.1);
+    transition: all 0.4s ease;
+    margin-bottom: 3rem;
+}
+
+.subscription-section__features:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 245, 245, 1) 100%);
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(255, 107, 107, 0.15);
+    border-color: rgba(255, 107, 107, 0.4);
+}
+
+.subscription-section__feature-item {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 107, 107, 0.2);
+    border-radius: 20px;
+    padding: 1.8rem 2rem 1.8rem 4rem;
+    margin-bottom: 1.8rem;
+    position: relative;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 20px rgba(255, 107, 107, 0.15);
+}
+
+.subscription-section__feature-item:last-child {
+    margin-bottom: 0;
+}
+
+.subscription-section__feature-item:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 245, 245, 1) 100%);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(255, 107, 107, 0.25);
+    border-color: rgba(255, 107, 107, 0.4);
+}
+
+.subscription-section__feature-item::before {
+    content: '✓';
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.2rem;
+    height: 2.2rem;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.subscription-section__feature-highlight {
+    font-size: 1.54rem;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.6;
+}
+
+.subscription-section__special {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 107, 107, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(255, 107, 107, 0.1);
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.subscription-section__special:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 245, 245, 1) 100%);
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(255, 107, 107, 0.15);
+    border-color: rgba(255, 107, 107, 0.4);
+}
+
+.subscription-section__special-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #ff6b6b;
+    text-align: center;
+}
+
+.subscription-section__special-content {
+    margin: 0;
+    text-align: center;
+}
+
+.subscription-section__benefit-main-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ff6b6b;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.subscription-section__benefit-description {
+    font-size: 1.54rem;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.subscription-section__benefit-condition {
+    font-size: 1.54rem;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* 特徴リストエリア */
@@ -2696,143 +2843,2550 @@ body {
 /* ========== セクション13専用CSS（CTAセクション） ========== */
 
 /* CTAセクション */
-.cta-section {
-    background-color: white;
-    color: #333;
-    padding: 120px 0;
-    position: relative;
-    overflow: hidden;
+        .cta-section {
+            background-color: white;
+            color: #333;
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 4rem;
+            color: #333;
+        }
+
+        .cta-text {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 100%);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 107, 107, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 32px rgba(255, 107, 107, 0.1);
+            transition: all 0.4s ease;
+            margin-bottom: 4rem;
+        }
+
+        .cta-text:hover {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 245, 245, 1) 100%);
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(255, 107, 107, 0.15);
+            border-color: rgba(255, 107, 107, 0.4);
+        }
+
+        .cta-text p {
+            font-size: 1.3rem;
+            font-weight: 500;
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            color: #333;
+        }
+
+        .cta-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-button-main {
+            display: inline-block;
+            padding: 1.5rem 3rem;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button-main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button-main:hover {
+            background: linear-gradient(135deg, #ff5252 0%, #ff7575 100%);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
+        }
+
+        .cta-button-main:hover::before {
+            left: 100%;
+        }
+
+        .cta-button-sub {
+            display: inline-block;
+            padding: 1.5rem 3rem;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 100%);
+            color: #ff6b6b;
+            text-decoration: none;
+            border: 2px solid rgba(255, 107, 107, 0.3);
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.1);
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .cta-button-sub:hover {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 245, 245, 1) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.2);
+            border-color: rgba(255, 107, 107, 0.5);
+        }
+
+        /* マニュアル選択画面のスタイル */
+        .manual-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .manual-selection {
+            background-color: white;
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .manual-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.3s ease;
+        }
+
+        .manual-close:hover {
+            color: #ff6b6b;
+        }
+
+        .manual-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .manual-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: #666;
+        }
+
+        .version-selection {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .version-card {
+            background-color: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 2rem;
+            width: 250px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .version-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.2);
+            border-color: #ff6b6b;
+        }
+
+        .version-image {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .version-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .version-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .version-description {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* マニュアル表示画面のスタイル */
+        .manual-display {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 1001;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .manual-header {
+            background-color: #667eea;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .manual-back {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .manual-back:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .manual-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0;
+        }
+
+        .manual-content * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .manual-content .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .manual-content .header {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .manual-content .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .manual-content .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .manual-content .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            background-color: #f8f9fa;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .manual-content .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .manual-content .section h3 {
+            color: #555;
+            font-size: 1.4em;
+            margin: 20px 0 15px 0;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+
+        .manual-content .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .manual-content .specs-table th,
+        .manual-content .specs-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .manual-content .specs-table th {
+            background-color: #667eea;
+            color: white;
+            font-weight: bold;
+        }
+
+        .manual-content .specs-table tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .manual-content .step-list {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .manual-content .step-list ol {
+            padding-left: 20px;
+        }
+
+        .manual-content .step-list li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+
+        .manual-content .highlight-box {
+            background-color: white;
+            border: 2px solid #2196f3;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .manual-content .warning-box {
+            background-color: #fff3e0;
+            border: 2px solid #ff9800;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .manual-content .warning-box::before {
+            content: "⚠️ ";
+            font-size: 1.2em;
+        }
+
+        .manual-content .panel-explanation {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+
+        .manual-content .function-cards {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .manual-content .function-card {
+            background-color: white;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .manual-content .function-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .manual-content .function-number {
+            display: inline-block;
+            background-color: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 0.9em;
+        }
+
+        .manual-content .function-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .manual-content .function-description {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .manual-content .device-image {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .manual-content .device-image img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .manual-content .footer {
+            text-align: center;
+            background-color: #667eea;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
 }
 
-.cta-section .container {
-    position: relative;
-    z-index: 2;
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .mobile-only {
+        display: inline;
+    }
+
+    .header-ribbon {
+        height: 300px;
+    }
+    
+    .hero, .problem-section, .solution-section, .medical-evidence-1, .scientific-evidence-2, .qa-schumann, .medical-potential, .product-intro, .safety-section, .recommendation-section, .qa-product, .subscription-section, .cta-section {
+        padding: 60px 0;
+    }
+    
+    .hero-brand {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.02em;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .problem-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        white-space: nowrap;
+    }
+
+    .problem-image {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    .desktop-text, .section-title-desktop {
+        display: none;
+    }
+    
+    .mobile-text, .section-title-mobile {
+        display: inline;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* セクション4スマホ改行修正 */
+    .evidence-main-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .evidence-main-title::after {
+        content: '\A';
+        white-space: pre;
+    }
+
+    .subsection-title {
+        font-size: 1.3rem;
+        margin-bottom: 3rem;
+    }
+
+    .subsection-title::after {
+        content: '\A';
+        white-space: pre;
+    }
+
+    .scientific-evidence-2 .section-title {
+        font-size: 2rem;
+    }
+
+    .qa-schumann .section-title {
+        font-size: 2rem;
+    }
+
+    .medical-potential .section-title {
+        font-size: 2rem;
+    }
+
+    .product-intro .section-title {
+        font-size: 2rem;
+    }
+
+    .qa-product .section-title {
+        font-size: 2rem;
+    }
+
+    .recommendation-title {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .cta-title {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        text-align: left; /* スマホ時は左詰め */
+    }
+
+    /* セクション7サブタイトルのスマホ改行 */
+    .potential-subtitle::after {
+        content: '\A';
+        white-space: pre;
+    }
+
+    .problem-list {
+        padding-left: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .problem-item {
+        padding: 1.4rem 1.5rem 1.4rem 3.5rem;
+        font-size: 1.4rem;
+        margin-bottom: 1.4rem;
+    }
+
+    .problem-item::before {
+        left: 0.8rem;
+        width: 1.8rem;
+        height: 1.8rem;
+        font-size: 0.9rem;
+    }
+
+    .problem-cta {
+        font-size: 1.3rem;
+    }
+
+    .content-flex {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .doctor-image {
+        flex: none;
+        order: -1;
+        text-align: center;
+        align-self: center;
+        width: 100%;
+    }
+
+    .doctor-image img {
+        max-width: 250px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .doctor-caption {
+        text-align: center;
+        margin: 0.5rem auto 0;
+    }
+
+    .description-card {
+        text-align: left;
+    }
+
+    .description-card p {
+        font-size: 1.3rem;
+        line-height: 1.8;
+    }
+
+    .device-image img {
+        max-width: 450px;
+        margin: 1.5rem 0 1rem 0;
+    }
+
+    .device-caption-desktop {
+        display: none;
+    }
+
+    .device-caption-mobile {
+        display: block;
+        font-size: 1rem;
+        line-height: 1.4;
+        white-space: normal;
+    }
+
+    .device-caption {
+        font-size: 1rem;
+        line-height: 1.4;
+        white-space: normal;
+    }
+
+    .features-flex {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .feature-card.left-align {
+        text-align: left;
+    }
+
+    .feature-card.left-align .feature-icon {
+        text-align: center;
+    }
+
+    .feature-card.left-align h3 {
+        text-align: center;
+    }
+
+    /* セクション4タブレット対応 */
+    .evidence-cards {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .evidence-card {
+        padding: 2rem;
+    }
+
+    .card-title {
+        font-size: 1.6rem;
+    }
+
+    .card-subtitle {
+        font-size: 1rem;
+    }
+
+    .card-content h5 {
+        font-size: 1.2rem;
+    }
+
+    .evidence-details summary {
+        font-size: 1.1rem;
+        padding: 0.8rem;
+    }
+
+    .improvement-data {
+        padding: 1.2rem;
+    }
+
+    .improvement-data p,
+    .improvement-data li {
+        font-size: 1rem;
+    }
+
+    .paper-link {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* セクション5タブレット対応 */
+    .schumann-explanation {
+        padding: 2rem;
+    }
+
+    .schumann-explanation > p {
+        font-size: 1.6rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .research-info {
+        padding: 1.5rem;
+    }
+
+    .research-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .research-info p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* セクション6タブレット対応 */
+    .qa-main-container summary {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .qa-item {
+        padding: 2rem;
+    }
+
+    .qa-question {
+        font-size: 1.1rem;
+    }
+
+    .qa-answer summary {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .qa-answer details > *:not(summary) {
+        padding: 1.5rem;
+    }
+
+    .qa-answer p {
+        font-size: 1.1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .qa-answer h4 {
+        font-size: 1.2rem;
+        margin: 1.5rem 0 0.8rem 0;
+    }
+
+    .qa-answer li {
+        font-size: 1rem;
+    }
+
+    /* セクション7タブレット対応 */
+    .potential-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .trial-image {
+        margin-bottom: 3rem;
+    }
+
+    .potential-main-container summary {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .potential-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .potential-item {
+        padding: 2rem;
+    }
+
+    .potential-title {
+        font-size: 1.1rem;
+    }
+
+    .potential-details summary {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .potential-details > p {
+        padding: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .references {
+        padding: 2rem;
+    }
+
+    .references h3 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .references li {
+        font-size: 0.95rem;
+    }
+
+    /* セクション8タブレット対応 */
+    .product-description {
+        font-size: 1.1rem;
+        margin-bottom: 3rem;
+        padding: 0 10px;
+    }
+
+    .product-display {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .product-visual,
+    .product-specs {
+        flex: none;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .sketchfab-embed-wrapper {
+        height: 300px;
+    }
+
+    .spec-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .spec-label {
+        min-width: auto;
+    }
+
+    .spec-value {
+        text-align: left;
+    }
+
+    .specs-details summary {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .specs-content {
+        padding: 1.5rem;
+    }
+
+    /* セクション9タブレット対応 */
+    .safety-description-text {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        padding: 0 15px;
+        margin-bottom: 3rem;
+        text-align: left;
+    }
+
+    .safety-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .safety-item {
+        padding: 2.5rem;
+        min-height: auto;
+    }
+
+    .safety-ratio {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .safety-title {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .safety-description {
+        font-size: 1.1rem;
+    }
+
+    .safety-main-container summary {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    /* スマホ時：カード幅最大化、フォントサイズ調整 */
+    .recommendation-card {
+        padding: 2rem;
+        margin-bottom: 3rem;
+        max-width: 100%;
+    }
+
+    .recommendation-item {
+        font-size: 1.05rem; /* スマホ時フォントサイズ縮小 */
+        margin-bottom: 1rem;
+        padding-left: 1.8rem;
+    }
+
+    .recommendation-item::before {
+        width: 1.3rem;
+        height:
+        height: 1.3rem;
+        font-size: 0.8rem;
+    }
+
+    .trial-card {
+        padding: 2.5rem;
+        margin-bottom: 3rem;
+        max-width: 100%;
+    }
+
+    .trial-card-title {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .trial-card-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .flow-grid {
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+        max-width: 100%;
+    }
+
+    .flow-card {
+        padding: 2rem;
+    }
+
+    .flow-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+        top: -12px;
+    }
+
+    .flow-card-title {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .flow-card-description {
+        font-size: 1.1rem;
+    }
+
+    .notice-text {
+        font-size: 0.95rem; /* スマホ時フォントサイズ縮小 */
+        margin-bottom: 3rem;
+        max-width: 100%;
+    }
+
+    /* スマホ時：エンドタイトル改行しないサイズ */
+    .end-title {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    /* セクション11タブレット対応 */
+    .qa-card {
+        padding: 2rem;
+    }
+
+    .qa-card-question {
+        font-size: 1.1rem;
+    }
+
+    .qa-summary {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .qa-answer-content {
+        padding: 1.5rem;
+    }
+
+    .answer-highlight {
+        font-size: 1.1rem;
+    }
+
+    /* セクション12タブレット対応 */
+    .subscription-features {
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .feature-item {
+        padding: 1.4rem 1.5rem 1.4rem 3.5rem;
+        margin-bottom: 1.4rem;
+    }
+
+    .feature-item::before {
+        left: 0.8rem;
+        width: 1.8rem;
+        height: 1.8rem;
+        font-size: 0.9rem;
+    }
+
+    .feature-highlight {
+        font-size: 1.4rem;
+    }
+
+    .subscription-special {
+        padding: 2rem;
+        text-align: left; /* スマホでは左詰め */
+    }
+
+    .special-title {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+        text-align: center; /* タイトルのみセンター */
+    }
+
+    .benefit-main-title {
+        font-size: 1.8rem;
+        text-align: center; /* メインタイトルはセンター */
+    }
+
+    .benefit-description,
+    .benefit-condition {
+        font-size: 1.4rem;
+        text-align: left; /* 説明文は左詰め */
+    }
+
+    /* セクション13タブレット対応 */
+    .cta-text {
+        padding: 2rem;
+        margin-bottom: 3rem;
+        text-align: left; /* スマホ時は左詰め */
+    }
+
+    .cta-text p {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .cta-buttons {
+        gap: 1.5rem;
+    }
+
+    .cta-button-main {
+        padding: 1.2rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .cta-button-sub {
+        padding: 1.2rem 2rem;
+        font-size: 1.1rem;
+    }
 }
 
-/* CTAコンテンツエリア */
-.cta-content {
-    max-width: 1100px;
-    margin: 0 auto;
-    text-align: center;
+@media (max-width: 480px) {
+    .header-ribbon {
+        height: 250px;
+    }
+    
+    .container, .evidence-container {
+        padding: 0 15px;
+    }
+    
+    .hero, .problem-section, .solution-section, .medical-evidence-1, .scientific-evidence-2, .qa-schumann, .medical-potential, .product-intro, .safety-section, .recommendation-section, .qa-product, .subscription-section, .cta-section {
+        padding: 50px 0;
+    }
+    
+    .hero-brand {
+        font-size: 1.8rem;
+        letter-spacing: 0.01em;
+    }
+    
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .problem-section h2 {
+        font-size: 1.3rem;
+        white-space: nowrap;
+    }
+
+    .problem-image {
+        margin-bottom: 1.5rem;
+        border-radius: 10px;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .evidence-main-title {
+        font-size: 1.6rem;
+    }
+
+    .subsection-title {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
+    .scientific-evidence-2 .section-title {
+        font-size: 1.6rem;
+    }
+
+    .qa-schumann .section-title {
+        font-size: 1.6rem;
+    }
+
+    .medical-potential .section-title {
+        font-size: 1.6rem;
+    }
+
+    .product-intro .section-title {
+        font-size: 1.6rem;
+    }
+
+    .qa-product .section-title {
+        font-size: 1.6rem;
+    }
+
+    .recommendation-title {
+        font-size: 1.6rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .cta-title {
+        font-size: 1.6rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .problem-list {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .problem-item {
+        padding: 1.2rem 1.2rem 1.2rem 3rem;
+        font-size: 1.33rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .problem-item::before {
+        left: 0.6rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        font-size: 0.8rem;
+    }
+
+    .problem-cta {
+        font-size: 1.2rem;
+        padding: 0 10px;
+    }
+
+    .description-card, .feature-card, .evidence-card {
+        padding: 1.8rem;
+    }
+
+    .doctor-image img {
+        max-width: 200px;
+    }
+
+    .device-image img {
+        max-width: 375px;
+        margin: 1rem 0 0.5rem 0;
+    }
+
+    .device-caption {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+
+    .feature-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .feature-card p {
+        font-size: 1rem;
+    }
+
+    /* セクション4スマートフォン対応 */
+    .evidence-cards {
+        gap: 1.5rem;
+    }
+
+    .card-title {
+        font-size: 1.4rem;
+    }
+
+    .card-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .card-content h5 {
+        font-size: 1.1rem;
+    }
+
+    .evidence-details summary {
+        font-size: 1rem;
+        padding: 0.7rem;
+    }
+
+    .improvement-data {
+        padding: 1rem;
+    }
+
+    .improvement-data p,
+    .improvement-data li {
+        font-size: 0.95rem;
+    }
+
+    .paper-link {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    /* セクション5スマートフォン対応 */
+    .schumann-explanation {
+        padding: 1.8rem;
+    }
+
+    .schumann-explanation > p {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+    }
+
+    .research-info {
+        padding: 1.2rem;
+    }
+
+    .research-info h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .research-info p {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    /* セクション6スマートフォン対応 */
+    .qa-main-container summary {
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .qa-item {
+        padding: 1.8rem;
+    }
+
+    .qa-question {
+        font-size: 1rem;
+    }
+
+    .qa-answer summary {
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .qa-answer details > *:not(summary) {
+        padding: 1.2rem;
+    }
+
+    .qa-answer p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .qa-answer h4 {
+        font-size: 1.1rem;
+        margin: 1.2rem 0 0.6rem 0;
+    }
+
+    .qa-answer li {
+        font-size: 0.95rem;
+    }
+
+    /* セクション7スマートフォン対応 */
+    .potential-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        padding: 0 10px;
+    }
+
+    .trial-image {
+        margin-bottom: 2.5rem;
+    }
+
+    .potential-main-container summary {
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .potential-item {
+        padding: 1.8rem;
+    }
+
+    .potential-title {
+        font-size: 1rem;
+    }
+
+    .potential-details summary {
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .potential-details > p {
+        padding: 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .references {
+        padding: 1.8rem;
+    }
+
+    .references h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .references li {
+        font-size: 0.9rem;
+    }
+
+    /* セクション8スマートフォン対応 */
+    .product-description {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+        padding: 0 5px;
+    }
+
+    .product-visual,
+    .product-specs {
+        padding: 1.8rem;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .sketchfab-embed-wrapper {
+        height: 250px;
+    }
+
+    .specs-title {
+        font-size: 1.6rem;
+    }
+
+    .specs-details summary {
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .specs-content {
+        padding: 1.2rem;
+    }
+
+    .spec-label,
+    .spec-value {
+        font-size: 1rem;
+    }
+
+    .specs-subtitle {
+        font-size: 1.2rem;
+        margin: 1.5rem 0 0.8rem 0;
+    }
+
+    /* セクション9スマートフォン対応 */
+    .safety-description-text {
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 0 10px;
+        margin-bottom: 2.5rem;
+    }
+
+    .safety-grid {
+        gap: 1.5rem;
+    }
+
+    .safety-item {
+        padding: 2rem;
+    }
+
+    .safety-ratio {
+        font-size: 1.4rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .safety-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .safety-description {
+        font-size: 1rem;
+    }
+
+    .safety-main-container summary {
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .recommendation-card {
+        padding: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .recommendation-item {
+        font-size: 0.95rem; /* さらに縮小 */
+        margin-bottom: 0.8rem;
+        padding-left: 1.5rem;
+    }
+
+    .recommendation-item::before {
+        width: 1.2rem;
+        height: 1.2rem;
+        font-size: 0.7rem;
+    }
+
+    .trial-card {
+        padding: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .trial-card-title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .trial-card-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .flow-card {
+        padding: 1.8rem;
+    }
+
+    .flow-number {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+        top: -10px;
+    }
+
+    .flow-card-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .flow-card-description {
+        font-size: 1rem;
+    }
+
+    .notice-text {
+        font-size: 0.85rem; /* さらに縮小 */
+        margin-bottom: 2.5rem;
+    }
+
+    .end-title {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+    }
+
+    /* セクション11スマートフォン対応 */
+    .qa-card {
+        padding: 1.8rem;
+    }
+
+    .qa-card-question {
+        font-size: 1rem;
+    }
+
+    .qa-summary {
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .qa-answer-content {
+        padding: 1.2rem;
+    }
+
+    .answer-highlight {
+        font-size: 1rem;
+    }
+
+    /* セクション12スマートフォン対応 */
+    .subscription-features {
+        padding: 1.8rem;
+    }
+
+    .feature-item {
+        padding: 1.2rem 1.2rem 1.2rem 3rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .feature-item::before {
+        left: 0.6rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        font-size: 0.8rem;
+    }
+
+    .feature-highlight {
+        font-size: 1.33rem;
+    }
+
+    .subscription-special {
+        padding: 1.8rem;
+    }
+
+    .special-title {
+        font-size: 1.4rem;
+    }
+
+    .benefit-main-title {
+        font-size: 1.6rem;
+    }
+
+    .benefit-description,
+    .benefit-condition {
+        font-size: 1.33rem;
+    }
+
+    /* セクション13スマートフォン対応 */
+    .cta-text {
+        padding: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .cta-text p {
+        font-size: 1.1rem;
+    }
+
+    .cta-button-main,
+    .cta-button-sub {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
 }
 
-/* CTAメインタイトル */
-.cta-title {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 2.8rem;
-    font-weight: 700;
-    line-height: 1.4;
-    margin-bottom: 4rem;
-    color: #333;
+@media (max-width: 320px) {
+    .header-ribbon {
+        height: 200px;
+    }
+    
+    .hero, .problem-section, .solution-section, .medical-evidence-1, .scientific-evidence-2, .qa-schumann, .medical-potential, .product-intro, .safety-section, .recommendation-section, .qa-product, .subscription-section, .cta-section {
+        padding: 40px 0;
+    }
+    
+    .hero-brand {
+        font-size: 1.5rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.4rem;
+    }
+
+    .problem-section h2 {
+        font-size: 1.1rem;
+        white-space: nowrap;
+    }
+
+    .problem-image {
+        margin-bottom: 1rem;
+        border-radius: 8px;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .evidence-main-title {
+        font-size: 1.4rem;
+    }
+
+    .subsection-title {
+        font-size: 1rem;
+        padding: 0 5px;
+    }
+
+    .scientific-evidence-2 .section-title {
+        font-size: 1.4rem;
+    }
+
+    .qa-schumann .section-title {
+        font-size: 1.4rem;
+    }
+
+    .medical-potential .section-title {
+        font-size: 1.4rem;
+    }
+
+    .product-intro .section-title {
+        font-size: 1.4rem;
+    }
+
+    .qa-product .section-title {
+        font-size: 1.4rem;
+    }
+
+    .recommendation-title {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+    }
+
+    .cta-title {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+    }
+
+    .problem-item {
+        padding: 1rem 1rem 1rem 2.5rem;
+        font-size: 1.26rem;
+        margin-bottom: 1rem;
+    }
+
+    .problem-item::before {
+        left: 0.4rem;
+        width: 1.4rem;
+        height: 1.4rem;
+        font-size: 0.7rem;
+    }
+
+    .problem-cta {
+        font-size: 1.1rem;
+    }
+
+    .description-card, .feature-card, .evidence-card {
+        padding: 1.5rem;
+    }
+
+    .device-image img {
+        max-width: 300px;
+        margin: 1rem 0 0.5rem 0;
+    }
+
+    .device-caption {
+        font-size: 0.8rem;
+        padding: 0 5px;
+    }
+
+    /* セクション4小型スマートフォン対応 */
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .improvement-data p,
+    .improvement-data li {
+        font-size: 0.9rem;
+    }
+
+    .paper-link {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* セクション5小型スマートフォン対応 */
+    .schumann-explanation {
+        padding: 1.5rem;
+    }
+
+    .schumann-explanation > p {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .research-info {
+        padding: 1rem;
+    }
+
+    .research-info h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .research-info p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    /* セクション6小型スマートフォン対応 */
+    .qa-main-container summary {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .qa-item {
+        padding: 1.5rem;
+    }
+
+    .qa-question {
+        font-size: 0.9rem;
+    }
+
+    .qa-answer summary {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .qa-answer details > *:not(summary) {
+        padding: 1rem;
+    }
+
+    .qa-answer p {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .qa-answer h4 {
+        font-size: 1rem;
+        margin: 1rem 0 0.5rem 0;
+    }
+
+    .qa-answer li {
+        font-size: 0.9rem;
+    }
+
+    /* セクション7小型スマートフォン対応 */
+    .potential-subtitle {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+        padding: 0 5px;
+    }
+
+    .trial-image {
+        margin-bottom: 2rem;
+    }
+
+    .potential-main-container summary {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .potential-item {
+        padding: 1.5rem;
+    }
+
+    .potential-title {
+        font-size: 0.9rem;
+    }
+
+    .potential-details summary {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .potential-details > p {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .references {
+        padding: 1.5rem;
+    }
+
+    .references h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .references li {
+        font-size: 0.85rem;
+    }
+
+    /* セクション8小型スマートフォン対応 */
+    .product-description {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+        padding: 0;
+    }
+
+    .product-visual,
+    .product-specs {
+        padding: 1.5rem;
+    }
+
+    .sketchfab-embed-wrapper {
+        height: 200px;
+    }
+
+    .specs-title {
+        font-size: 1.4rem;
+    }
+
+    .specs-details summary {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .specs-content {
+        padding: 1rem;
+    }
+
+    .spec-label,
+    .spec-value {
+        font-size: 0.9rem;
+    }
+
+    .specs-subtitle {
+        font-size: 1.1rem;
+        margin: 1.2rem 0 0.6rem 0;
+    }
+
+    /* セクション9小型スマートフォン対応 */
+    .safety-description-text {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        padding: 0 5px;
+        margin-bottom: 2rem;
+    }
+
+    .safety-item {
+        padding: 1.5rem;
+    }
+
+    .safety-ratio {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .safety-title {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .safety-description {
+        font-size: 0.95rem;
+    }
+
+    .safety-main-container summary {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .recommendation-card {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .recommendation-item {
+        font-size: 0.85rem; /* 最小サイズ */
+        margin-bottom: 0.7rem;
+        padding-left: 1.3rem;
+    }
+
+    .recommendation-item::before {
+        width: 1rem;
+        height: 1rem;
+        font-size: 0.6rem;
+    }
+
+    .trial-card {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .trial-card-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .trial-card-subtitle {
+        font-size: 1rem;
+    }
+
+    .flow-card {
+        padding: 1.5rem;
+    }
+
+    .flow-number {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+        top: -8px;
+    }
+
+    .flow-card-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .flow-card-description {
+        font-size: 0.9rem;
+    }
+
+    .notice-text {
+        font-size: 0.75rem; /* 最小サイズ */
+        margin-bottom: 2rem;
+    }
+
+    .end-title {
+        font-size: 1.1rem;
+        margin-top: 1rem;
+    }
+
+    /* セクション11小型スマートフォン対応 */
+    .qa-card {
+        padding: 1.5rem;
+    }
+
+    .qa-card-question {
+        font-size: 0.9rem;
+    }
+
+    .qa-summary {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .qa-answer-content {
+        padding: 1rem;
+    }
+
+    .answer-highlight {
+        font-size: 0.9rem;
+    }
+
+    /* セクション12小型スマートフォン対応 */
+    .subscription-features {
+        padding: 1.5rem;
+    }
+
+    .feature-item {
+        padding: 1rem 1rem 1rem 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .feature-item::before {
+        left: 0.4rem;
+        width: 1.4rem;
+        height: 1.4rem;
+        font-size: 0.7rem;
+    }
+
+    .feature-highlight {
+        font-size: 1.26rem;
+    }
+
+    .subscription-special {
+        padding: 1.5rem;
+    }
+
+    .special-title {
+        font-size: 1.2rem;
+    }
+
+    .benefit-main-title {
+        font-size: 1.4rem;
+    }
+
+    .benefit-description,
+    .benefit-condition {
+        font-size: 1.26rem;
+    }
+
+    /* セクション13小型スマートフォン対応 */
+    .cta-text {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .cta-text p {
+        font-size: 1rem;
+    }
+
+    .cta-button-main,
+    .cta-button-sub {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.95rem;
+    }
 }
 
-/* CTAテキストエリア */
-.cta-text {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 100%);
-    backdrop-filter: blur(20px);
-    border: 2px solid rgba(255, 107, 107, 0.2);
-    border-radius: 20px;
-    padding: 2.5rem;
-    box-shadow: 0 8px 32px rgba(255, 107, 107, 0.1);
-    transition: all 0.4s ease;
-    margin-bottom: 4rem;
-}
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchro Wave 01 - セクション13 CTA</title>
+    
+    <!-- フォント読み込み -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.cta-text:hover {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 245, 245, 1) 100%);
-    transform: translateY(-8px);
-    box-shadow: 0 16px 48px rgba(255, 107, 107, 0.15);
-    border-color: rgba(255, 107, 107, 0.4);
-}
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+            background-color: white;
+        }
 
-.cta-text p {
-    font-size: 1.3rem;
-    font-weight: 500;
-    line-height: 1.8;
-    margin-bottom: 1.2rem;
-    color: #333;
-}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-.cta-text p:last-child {
-    margin-bottom: 0;
-}
+       /* ========== セクション13専用CSS（CTAセクション） ========== */
+        
+        .cta-section {
+            background-color: white;
+            color: #333;
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
 
-/* CTAボタンエリア */
-.cta-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
+        .cta-section .container {
+            position: relative;
+            z-index: 2;
+        }
 
-/* メインCTAボタン */
-.cta-button-main {
-    display: inline-block;
-    padding: 1.5rem 3rem;
-    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
-    color: white;
-    text-decoration: none;
-    border-radius: 15px;
-    font-weight: 700;
-    font-size: 1.3rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
+        .cta-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
 
-.cta-button-main::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-}
+        .cta-title {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 4rem;
+            color: #333;
+        }
 
-.cta-button-main:hover {
-    background: linear-gradient(135deg, #ff5252 0%, #ff7575 100%);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
-}
+        .cta-text {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 100%);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 107, 107, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 32px rgba(255, 107, 107, 0.1);
+            transition: all 0.4s ease;
+            margin-bottom: 4rem;
+        }
 
-.cta-button-main:hover::before {
-    left: 100%;
-}
+        .cta-text:hover {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 245, 245, 1) 100%);
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(255, 107, 107, 0.15);
+            border-color: rgba(255, 107, 107, 0.4);
+        }
 
-/* サブCTAボタン - フォントサイズをメインに合わせる */
-.cta-button-sub {
-    display: inline-block;
-    padding: 1.5rem 3rem;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 100%);
-    color: #ff6b6b;
-    text-decoration: none;
-    border: 2px solid rgba(255, 107, 107, 0.3);
-    border-radius: 15px;
-    font-weight: 700;
-    font-size: 1.3rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.1);
-    text-align: center;
-}
+        .cta-text p {
+            font-size: 1.3rem;
+            font-weight: 500;
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            color: #333;
+        }
 
-.cta-button-sub:hover {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 245, 245, 1) 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.2);
-    border-color: rgba(255, 107, 107, 0.5);
-}
+        .cta-text p:last-child {
+            margin-bottom: 0;
+        }
 
-/* mobile-only クラス */
-.mobile-only {
-    display: none;
-}
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-/* PCで画面幅が狭い場合の調整（1400px以下） */
+        .cta-button-main {
+            display: inline-block;
+            padding: 1.5rem 3rem;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button-main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button-main:hover {
+            background: linear-gradient(135deg, #ff5252 0%, #ff7575 100%);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
+        }
+
+        .cta-button-main:hover::before {
+            left: 100%;
+        }
+
+        .cta-button-sub {
+            display: inline-block;
+            padding: 1.5rem 3rem;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 100%);
+            color: #ff6b6b;
+            text-decoration: none;
+            border: 2px solid rgba(255, 107, 107, 0.3);
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.1);
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .cta-button-sub:hover {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 245, 245, 1) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.2);
+            border-color: rgba(255, 107, 107, 0.5);
+        }
+
+        /* マニュアル選択画面のスタイル */
+        .manual-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .manual-selection {
+            background-color: white;
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .manual-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.3s ease;
+        }
+
+        .manual-close:hover {
+            color: #ff6b6b;
+        }
+
+        .manual-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .manual-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: #666;
+        }
+
+        .version-selection {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .version-card {
+            background-color: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 2rem;
+            width: 250px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .version-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.2);
+            border-color: #ff6b6b;
+        }
+
+        .version-image {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .version-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .version-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .version-description {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* マニュアル表示画面のスタイル */
+        .manual-display {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 1001;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .manual-header {
+            background-color: #667eea;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .manual-back {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .manual-back:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .manual-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0;
+        }
+
+        .manual-content * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .manual-content .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .manual-content .header {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .manual-content .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .manual-content .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .manual-content .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            background-color: #f8f9fa;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .manual-content .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .manual-content .section h3 {
+            color: #555;
+            font-size: 1.4em;
+            margin: 20px 0 15px 0;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+
+        .manual-content .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .manual-content .specs-table th,
+        .manual-content .specs-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .manual-content .specs-table th {
+            background-color: #667eea;
+            color: white;
+            font-weight: bold;
+        }
+
+        .manual-content .specs-table tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .manual-content .step-list {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .manual-content .step-list ol {
+            padding-left: 20px;
+        }
+
+        .manual-content .step-list li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+
+        .manual-content .highlight-box {
+            background-color: white;
+            border: 2px solid #2196f3;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .manual-content .warning-box {
+            background-color: #fff3e0;
+            border: 2px solid #ff9800;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .manual-content .warning-box::before {
+            content: "⚠️ ";
+            font-size: 1.2em;
+        }
+
+        .manual-content .panel-explanation {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+
+        .manual-content .function-cards {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .manual-content .function-card {
+            background-color: white;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .manual-content .function-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .manual-content .function-number {
+            display: inline-block;
+            background-color: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 0.9em;
+        }
+
+        .manual-content .function-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .manual-content .function-description {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .manual-content .device-image {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .manual-content .device-image img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .manual-content .footer {
+            text-align: center;
+            background-color: #667eea;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+        /* レスポンシブ対応 */
+        /* PCで画面幅が狭い場合の調整（1400px以下） */
 @media (max-width: 1400px) {
     .section-title {
         font-size: 2.4rem;
@@ -4490,172 +7044,7 @@ body {
         padding: 0.8rem 1.2rem;
         font-size: 0.95rem;
     }
-}
-
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synchro Wave 01 - セクション13 CTA</title>
-    
-    <!-- フォント読み込み -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-            line-height: 1.6;
-            background-color: white;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-       /* ========== セクション13専用CSS（CTAセクション） ========== */
-        
-        /* CTAセクション */
-        .cta-section {
-            background-color: white;
-            color: #333;
-            padding: 120px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-section .container {
-            position: relative;
-            z-index: 2;
-        }
-
-        /* CTAコンテンツエリア */
-        .cta-content {
-            max-width: 1100px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        /* CTAメインタイトル */
-        .cta-title {
-            font-family: 'Noto Sans JP', sans-serif;
-            font-size: 2.8rem;
-            font-weight: 700;
-            line-height: 1.4;
-            margin-bottom: 4rem;
-            color: #333;
-        }
-
-        /* CTAテキストエリア */
-        .cta-text {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 100%);
-            backdrop-filter: blur(20px);
-            border: 2px solid rgba(255, 107, 107, 0.2);
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 8px 32px rgba(255, 107, 107, 0.1);
-            transition: all 0.4s ease;
-            margin-bottom: 4rem;
-        }
-
-        .cta-text:hover {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 245, 245, 1) 100%);
-            transform: translateY(-8px);
-            box-shadow: 0 16px 48px rgba(255, 107, 107, 0.15);
-            border-color: rgba(255, 107, 107, 0.4);
-        }
-
-        .cta-text p {
-            font-size: 1.3rem;
-            font-weight: 500;
-            line-height: 1.8;
-            margin-bottom: 1.2rem;
-            color: #333;
-        }
-
-        .cta-text p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* CTAボタンエリア */
-        .cta-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* メインCTAボタン */
-        .cta-button-main {
-            display: inline-block;
-            padding: 1.5rem 3rem;
-            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 15px;
-            font-weight: 700;
-            font-size: 1.3rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-button-main::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .cta-button-main:hover {
-            background: linear-gradient(135deg, #ff5252 0%, #ff7575 100%);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
-        }
-
-        .cta-button-main:hover::before {
-            left: 100%;
-        }
-
-        /* サブCTAボタン - フォントサイズをメインに合わせる */
-        .cta-button-sub {
-            display: inline-block;
-            padding: 1.5rem 3rem;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 100%);
-            color: #ff6b6b;
-            text-decoration: none;
-            border: 2px solid rgba(255, 107, 107, 0.3);
-            border-radius: 15px;
-            font-weight: 700;
-            font-size: 1.3rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.1);
-            text-align: center;
-        }
-
-        .cta-button-sub:hover {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 245, 245, 1) 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.2);
-            border-color: rgba(255, 107, 107, 0.5);
-        }
-
-        /* レスポンシブ対応 */
-        @media (max-width: 768px) {
+@media (max-width: 768px) {
             .cta-section {
                 padding: 60px 0;
             }
@@ -4715,6 +7104,36 @@ body {
                 padding: 0.8rem 1.2rem;
                 font-size: 0.95rem;
             }
+        }
+    </style>
+
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchro Wave 01 - セクション13 CTA</title>
+    
+    <!-- フォント読み込み -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+            background-color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
         }
     </style>
 </head>
@@ -5192,7 +7611,7 @@ body {
                             <details class="qa-details">
                                 <summary class="qa-summary">回答を見る</summary>
                                 <div class="qa-answer-content">
-                                    <span class="answer-highlight">ELF超低周波発信器の感じ方には個人差があります。数日で変化を感じる方もいらっしゃれば、数週間かけて徐々に変化を感じる方もいらっしゃいます。まずは60日間の無料体験期間を通じて、じっくりとお試しください。</span>
+                                    <span class="answer-highlight">ELF超低周波発信器の感じ方には個人差があります。数日で変化を感じる方もいらっしゃれば、数週間かけて徐々に変化を感じる方もいらっしゃいます。まずは30日間の無料体験期間を通じて、じっくりとお試しください。</span>
                                 </div>
                             </details>
                         </div>
@@ -5344,7 +7763,7 @@ body {
 
             <!-- 無料試用カード（変更なし） -->
             <div class="trial-card">
-                <h3 class="trial-card-title">60日間効果を感じるまで無料で試すことができます</h3>
+                <h3 class="trial-card-title">30日間効果を感じるまで無料で試すことができます</h3>
                 <p class="trial-card-subtitle">まずはじっくりと効果を実感していただけます</p>
             </div>
 
@@ -5370,7 +7789,7 @@ body {
 
                 <div class="flow-card">
                     <div class="flow-number">4</div>
-                    <h4 class="flow-card-title">60日間じっくり効果を実感</h4>
+                    <h4 class="flow-card-title">30日間じっくり効果を実感</h4>
                     <p class="flow-card-description">無料体験期間中に、睡眠の質の変化をじっくりとお確かめください。</p>
                 </div>
 
@@ -5415,7 +7834,7 @@ body {
                         <span class="feature-highlight">月額3,500円（税込）のサブスクリプション契約です。</span>
                     </div>
                     <div class="feature-item">
-                        <span class="feature-highlight">60日間無料体験 - 効果を実感してからご契約いただけます。</span>
+                        <span class="feature-highlight">30日間無料体験 - 効果を実感してからご契約いただけます。</span>
                     </div>
                     <div class="feature-item">
                         <span class="feature-highlight">違約金なし - いつでも解約可能です。</span>
@@ -5434,7 +7853,7 @@ body {
                 <div class="subscription-special">
                     <h3 class="special-title">特典</h3>
                     <div class="special-content">
-                        <div class="benefit-main-title">60日間完全無料体験</div>
+                        <div class="benefit-main-title">30日間完全無料体験</div>
                         <div class="benefit-description">上質な睡眠を安定して実感いただける平均期間（60日）は完全無料</div>
                         <div class="benefit-condition">効果を感じられない場合は費用は一切かかりません。</div>
                     </div>
@@ -5492,74 +7911,567 @@ body {
 
 </body>
  <!-- 13. CTAセクション -->
-    <section class="cta-section" id="cta">
+<section class="cta-section" id="cta">
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">上質な睡眠への第一歩を踏み出しませんか？</h2>
                 <div class="cta-text">
                     <p>もう、眠れない夜に悩む必要はありません。</p>
                     <p>医師と共に、科学的根拠に基づいた睡眠改善を始めましょう。</p>
-                    <p>まずは60日間の無料体験で良質な眠りを実感してください。</p>
+                    <p>まずは30日間の無料体験で良質な眠りを実感してください。</p>
                 </div>
-                
                 <div class="cta-buttons">
-                    <a href="#trial" class="cta-button-main">
-                        60日間無料体験を始める
+                    <a href="https://matsuodentalassociation.github.io/netshop/" class="cta-button-main">
+                        30日間無料体験を始める
                     </a>
-                    <a href="#manual" class="cta-button-sub">
+                    <button class="cta-button-sub" id="manualButton">
                         synchrowave01の取扱説明書を見る
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
-
+    <!-- マニュアル選択オーバーレイ -->
+    <div class="manual-overlay" id="manualOverlay">
+        <div class="manual-selection">
+            <div class="manual-close" id="manualClose">×</div>
+            <h2 class="manual-title">SynchroWave01 取扱説明書</h2>
+            <p class="manual-subtitle">ご利用の機種を選択してください</p>
+            <div class="version-selection">
+                <div class="version-card" data-version="vr1">
+                    <div class="version-image">
+                        <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/137251442/XIMQ17r05ug6SDsc.PNG?Expires=1751991753&Signature=LRzti7-9afX0NsAjsKISyUQiVo5Z~mb5dtEM7~jlldaZ-j-~AsFRe03K0db10bax2yoUu0O98PBiMG8TN45bl4VTj5cj257~o5JpKuY66oCHxfD~H-1lCDhyd3SAZmc-4zLTA3DaxLuNus-rydcnN6IsfsiLOCNsN~xKeUeHdPrdPaFSMa6ftyidFJLqlXKpvYALt4QbednSZfqTp2J2ztClB9hw181yafuBwZdq58T-nqb8fm2UB0IdU5X26jqzP4EA6zVsl3KRAvbzcYP1KErEltNibFvJc4TYt8rg1xvbQqYECVJJoV9USEs8ypEYaoXrsbYbRjEkeEODnHylpA__&Key-Pair-Id=K3USGZIKWMDCSX" alt="SynchroWave01 Vr.1">
+                    </div>
+                    <div class="version-name">SynchroWave01 Vr.1</div>
+                    <div class="version-description">従来型モデル</div>
+                </div>
+                <div class="version-card" data-version="vr2">
+                    <div class="version-image">
+                        <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/137251442/0aoYpobOPli6p8jM.PNG?Expires=1751991757&Signature=sLN~UThqa24bVYgK~6RSqpML8m3Lpyhp2jXzgLaAmtfumWO2Adrsj-GVSlUeK-pGq~k7HneQoKMXhiOW-dZrjDmeAo6k72qwrr9Am4mrFgG9KF47SUDIa5xJgN3bXu5T0JOS1x2dcmgH8oMMQK1bOf6fp2omnQko6MC2REcnNxfeOaom8MKcSJjh4cr6izTMaxJ5dWlkRMDbZBhcFuwdklrU~5HKKVdRSQbL9murASK5IBCcUMdQL3nNjquyWA7ECN-nf4VhjFvP6ixL-XSFMosaZ40kKv~1JJ65xz4iyntyf37KQpEkSFfE5BDK0hfigphOTjA3F054T9akSBBASA__&Key-Pair-Id=K3USGZIKWMDCSX" alt="SynchroWave01 Vr.2">
+                    </div>
+                    <div class="version-name">SynchroWave01 Vr.2</div>
+                    <div class="version-description">最新型モデル</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- マニュアル表示画面 -->
+    <div class="manual-display" id="manualDisplay">
+        <div class="manual-header">
+            <h3 id="manualHeaderTitle">取扱説明書</h3>
+            <button class="manual-back" id="manualBack">戻る</button>
+        </div>
+        <div class="manual-content" id="manualContent">
+            <!-- ここにマニュアル内容が動的に挿入される -->
+        </div>
+    </div>
     <script>
-        // CTAボタンのクリックイベント
-        document.querySelectorAll('.cta-button-main, .cta-button-sub').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // ボタンクリック時のアニメーション
-                this.style.transform = 'scale(0.95)';
-                setTimeout(() => {
-                    this.style.transform = '';
-                }, 150);
-                
-                // 実際のリンク処理（必要に応じて実装）
-                console.log('CTA button clicked:', this.textContent);
+        document.addEventListener('DOMContentLoaded', () => {
+            // マニュアル内容
+            const manualData = {
+                vr1: `
+                    <div class="container">
+                        <header class="header">
+                            <h1>SynchroWave01.Vr1</h1>
+                            <p>取扱説明書</p>
+                        </header>
+                        <section class="section">
+                            <h2>製品概要</h2>
+                            <p>SynchroWave01.Vr1は7.83Hzのシューマン共振波を出力できる信号発生器です。</p>
+                            <p>本製品は7.83Hzシューマン波の出力だけでなく、0.01Hz～100KHzの範囲で周波数を調整することができ、デジタル回路水晶発振器周波数基準により、より安定で強力な抗干渉性能を実現しています。</p>
+                        </section>
+                        <section class="section">
+                            <h2>製品仕様</h2>
+                            <table class="specs-table">
+                                <thead>
+                                    <tr>
+                                        <th>項目</th>
+                                        <th>仕様</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>動作電圧</td><td>DC 5V</td></tr>
+                                    <tr><td>動作電流</td><td>12-16mA</td></tr>
+                                    <tr><td>電源インターフェース</td><td>Type-C（TYPE-C to TYPE-C対応）</td></tr>
+                                    <tr><td>デフォルト周波数</td><td>7.83Hz</td></tr>
+                                    <tr><td>調整範囲</td><td>0.01Hz～100000Hz（純正弦波）</td></tr>
+                                    <tr><td>信号電圧振幅</td><td>3.3V</td></tr>
+                                    <tr><td>出力端子</td><td>3.5mmオーディオ出力</td></tr>
+                                    <tr><td>サイズ</td><td>100×66×38mm</td></tr>
+                                    <tr><td>重量</td><td>78g</td></tr>
+                                </tbody>
+                            </table>
+                        </section>
+                        <section class="section">
+                            <h2>操作パネル説明</h2>
+                            <h3>各部の機能説明</h3>
+                            <div class="panel-explanation">
+                                <div class="function-cards">
+                                    <div class="function-card">
+                                        <div class="function-title">
+                                            <span class="function-number">①</span>
+                                            type-C電源ジャック
+                                        </div>
+                                        <div class="function-description">
+                                            DC 5V電源を接続します
+                                        </div>
+                                    </div>
+                                    <div class="function-card">
+                                        <div class="function-title">
+                                            <span class="function-number">②</span>
+                                            PWRボタン
+                                        </div>
+                                        <div class="function-description">
+                                            電源のON/OFFを切り替えます。エンコーダーボタンを押すことでも電源を入れることができます。
+                                        </div>
+                                    </div>
+                                    <div class="function-card">
+                                        <div class="function-title">
+                                            <span class="function-number">③</span>
+                                            周波数表示部（OLED）
+                                        </div>
+                                        <div class="function-description">
+                                            現在の周波数と各種設定を表示します（表示例：Sin (Hz): 7.83）
+                                        </div>
+                                    </div>
+                                    <div class="function-card">
+                                        <div class="function-title">
+                                            <span class="function-number">④</span>
+                                            エンコーダーボタン
+                                        </div>
+                                        <div class="function-description">
+                                            回転で周波数調整、押下で設定モード切替。電源ON/OFFも可能です。
+                                        </div>
+                                    </div>
+                                    <div class="function-card">
+                                        <div class="function-title">
+                                            <span class="function-number">⑤</span>
+                                            拡張アンテナジャック3.5ｍｍ
+                                        </div>
+                                        <div class="function-description">
+                                            拡張アンテナを繋ぎ共振エリアを拡大します。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="device-image">
+                                    <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/137251442/j79UHwdCMJ6CEbZ7.PNG?Expires=1751991735&Signature=Sf0F8WOtTSSZej3QpRbhqkrmd5R6rUs-alxC3zFSpPP0bbx0fzkk~ErpZEd9OTBLwFBtf5vtV6e0lZw6AqqU~pHA8s4F-5M04Nyze8uYmrbATIraXt-kIOBq9ylaArANbZKLCoadgkJxbFGxvubnOQPtpvQjTYySOdbCM5VUqZk6unPKbSeY1EhAyhiZFi-EzZIxz3vMV6iDgesJDZWeW-~8t1Qr6z7sjsEt1H9-FJyOWtKqxeuYms4JJWmjS0U8JD6akNf38-OGMwPUgTVDk~yTnHwaTVbyEfyfqR1w~UUANDbxxnX7OAlmD4j6WsYedCqlPmpBoCRbaCMxOZMtlw__&Key-Pair-Id=K3USGZIKWMDCSX" alt="製品外観図" 
+                                         loading="lazy"
+                                         onerror="this.style.display='none'; if(this.nextElementSibling){this.nextElementSibling.style.display='block';}">
+                                    <div style="display:none;" class="image-error">
+                                        <p>画像を読み込めませんでした</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section">
+                            <h2>拡張アンテナシステム</h2>
+                            <div class="highlight-box">
+                                <h4>シューマン共振波照射エリアの拡張</h4>
+                                <p>本体の3.5mmジャックと拡張アンテナを接続することで、共振エリアを大幅に拡張できます。</p>
+                            </div>
+                            <div class="diagram">
+                                <img src="https://i.imgur.com/QOuYn2W.jpg" alt="外部アンテナ接続図"
+                                     loading="lazy"
+                                     onerror="this.style.display='none'; if(this.nextElementSibling){this.nextElementSibling.style.display='block';}">
+                                <div style="display:none;" class="image-error">
+                                    <p>画像を読み込めませんでした</p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section">
+                            <h2>基本的な使用方法</h2>
+                            <h3>1. 初期セットアップ</h3>
+                            <div class="step-list">
+                                <ol>
+                                    <li>Type-C電源ケーブルを信号発生器に接続</li>
+                                    <li>PWRボタンを押して電源をONにする（またはエンコーダーボタンを押下）</li>
+                                    <li>自動的に7.83Hz信号の出力を開始</li>
+                                </ol>
+                            </div>
+                            <div class="warning-box">
+                                本製品にはTYPE-C電源コードは付属していません。別途ご用意ください。
+                            </div>
+                            <h3>2. 周波数調整手順</h3>
+                            <div class="highlight-box">
+                                <h4>設定モードへの入り方</h4>
+                                <p>エンコーダーボタンを押すと「Input(Hz):」が表示され、設定モードに入ります</p>
+                            </div>
+                            <div class="highlight-box">
+                                <h4>周波数の変更</h4>
+                                <p>エンコーダーボタンを回転させて必要な周波数に調整します</p>
+                                <p>再度エンコーダーボタンを押すと設定が保存されます</p>
+                            </div>
+                            <div class="highlight-box">
+                                <h4>調整ステップ</h4>
+                                <p>0.01-99.99Hz : 0.01Hz刻み</p>
+                                <p>100.0-999.9Hz : 0.1Hz刻み</p>
+                                <p>1000-9999Hz : 1Hz刻み</p>
+                                <p>10K-100KHz : 10Hz刻み</p>
+                            </div>
+                        </section>
+                        <section class="section">
+                            <h2>高度な設定機能</h2>
+                            <div class="highlight-box">
+                                <h4>電源オフ後の設定保存</h4>
+                                <p><strong>操作</strong>: エンコーダーボタンを長押し → 「Data Save ON」表示まで待つ</p>
+                                <p><strong>効果</strong>: 電源を切っても設定した周波数が保持</p>
+                            </div>
+                            <div class="highlight-box">
+                                <h4>工場出荷時設定への復帰</h4>
+                                <p><strong>通常時</strong>: 電源再投入で自動的にデフォルト設定（7.83Hz）に復帰</p>
+                                <p><strong>保存機能有効時</strong>: エンコーダーボタン長押し → 「Data Save OFF」表示後、電源再投入</p>
+                            </div>
+                            <div class="highlight-box">
+                                <h4>電源のOFF方法</h4>
+                                <p><strong>方法1</strong>: 電源を切断する</p>
+                                <p><strong>方法2</strong>: PWRボタンを押す</p>
+                            </div>
+                        </section>
+                        <section class="section">
+                            <h2>トラブルシューティング</h2>
+                            <div class="highlight-box">
+                                <h4>Q1: 機械の電源が入らない場合</h4>
+                                <p>A1: TYPE-C電源が通電しているか確認し、TYPE-Cケーブルと電源を交換してください</p>
+                                <p>A2: PWRボタンが押されていない場合、電源接続後PWRボタンを押してください（エンコーダーボタンでも電源ON可能）</p>
+                            </div>
+                            <div class="highlight-box">
+                                <h4>Q2: 効果を確認する方法</h4>
+                                <p>A2: 7.83HZ信号は超低周波信号で人間の耳では聞こえません。ディスプレイが点灯している限り、信号が送信されています。</p>
+                            </div>
+                            <div class="highlight-box">
+                                <h4>Q3: 電源を切ると設定がリセットされる</h4>
+                                <p>A3: エンコーダーボタンを長押しして「Data Save ON」を表示させ、保存機能を有効にしてください</p>
+                            </div>
+                        </section>
+                        <section class="section">
+                            <h2>安全上の注意</h2>
+                            <div class="warning-box">
+                                Type-C電源
+                                Type-C電源は5V仕様のものをご使用ください
+                            </div>
+                            <div class="warning-box">
+                                湿気や水分を避けて保管してください
+                            </div>
+                            <div class="warning-box">
+                                分解や改造は行わないでください
+                            </div>
+                        </section>
+                        <footer class="footer">
+                            <p><strong>製品に関するご質問やサポートが必要な場合は、ご契約診療所までお問い合わせください。</strong></p>
+                            <p>シューマン共振についての詳細は「Schumann Resonance」で検索してください。</p>
+                        </footer>
+                    </div>
+                `,
+                vr2: `
+                    <div class="container">
+                        <header class="header">
+                            <h1>SynchroWave01.Vr2</h1>
+                            <p>取扱説明書</p>
+                        </header>
+                        <section class="section">
+                            <h2>製品概要</h2>
+                            <p>SynchroWave01.Vr2は7.83Hzのシューマン共振波をはじめとする様々な共振波を出力できます。</p>
+                        </section>
+                        <section class="section">
+                            <h2>製品仕様</h2>
+                            <table class="specs-table">
+                                <thead>
+                                    <tr>
+                                        <th>項目</th>
+                                        <th>仕様</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>動作電圧</td><td>DC 5V</td></tr>
+                                    <tr><td>動作電流</td><td>13-17mA</td></tr>
+                                    <tr><td>電源インターフェース</td><td>Type-C（TYPE-C to TYPE-C対応）</td></tr>
+                                    <tr><td>デフォルト周波数</td><td>7.83Hz</td></tr>
+                                    <tr><td>調整範囲</td><td>0.01Hz～9999Hz</td></tr>
+                                    <tr><td>信号電圧振幅</td><td>3V</td></tr>
+                                    <tr><td>出力端子</td><td>3.5mmオーディオ出力</td></tr>
+                                    <tr><td>サイズ</td><td>56×56×12mm</td></tr>
+                                    <tr><td>重量</td><td>42g</td></tr>
+                                </tbody>
+                            </table>
+                        </section>
+                        <section class="section">
+                            <h2>操作パネル説明</h2>
+                            <h3>各部の機能説明</h3>
+                            <div class="panel-explanation">
+                                <div class="function-cards">
+                                    <div class="function-card">
+                                        <div class="function-title">
+                                            <span class="function-number">①</span>
+                                            type-C電源ジャック
+                                        </div>
+                                    </div>
+                                    <div class="function-card">
+                                        <div class="function-title">
+                                            <span class="function-number">②</span>
+                                            周波数表示部
+                                        </div>
+                                        <div class="function-description">
+                                            （表示例：7.83Hz）
+                                        </div>
+                                    </div>
+                                    <div class="function-card">
+                                        <div class="function-title">
+                                            <span class="function-number">③</span>
+                                            SETボタン（赤色）
+                                        </div>
+                                        <div class="function-description">
+                                            設定モードの切替に使用します。押すと小数点が点滅し、設定モードに入ります。
+                                        </div>
+                                    </div>
+                                    <div class="function-card">
+                                        <div class="function-title">
+                                            <span class="function-number">④</span>
+                                            +ボタン（黄色）
+                                        </div>
+                                        <div class="function-description">
+                                            周波数を増加させるボタンです。長押しで高速調整が可能です。
+                                        </div>
+                                    </div>
+                                    <div class="function-card">
+                                        <div class="function-title">
+                                            <span class="function-number">⑤</span>
+                                            -ボタン（青色）
+                                        </div>
+                                        <div class="function-description">
+                                            周波数を減少させるボタンです。長押しで高速調整が可能です。
+                                        </div>
+                                    </div>
+                                    <div class="function-card">
+                                        <div class="function-title">
+                                            <span class="function-number">⑥</span>
+                                            拡張アンテナジャック3.5ｍｍ
+                                        </div>
+                                        <div class="function-description">
+                                            拡張アンテナを繋ぎ共振エリアを拡大します。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="device-image">
+                                    <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/137251442/rRwD37RRsBY7eGZA.PNG?Expires=1751991742&Signature=iDUGeLz~AvpN3JRzIifaHUerPAXIPWwuKY~hZzJXyCJ9rO4WMp6g4nGGsHrMzb5nYdhKHqXYyS4SrYlGHJvj9gvh3G0DW~bPyy0kT8Z7ho4ou8OWKEVgSaElu13B9W0yGyRdcN5SBy3p6a7WIV22Xdh2Sz2izUw-3hfcI4bo6ME1-tcpop-Igqi8KA6Y4SwbbYDFMYKmhHQqfE8faEmhydReL0SOAHqO4m1~zAiPlDZlBDzErQd0IYGjzTmA0qIH~zk-e3rbgH9iXF3h9uiD1emegQDYVqQz0O1~ZlQgSzr3~cpW79NkM2i3VKNngkG0hy~dfJ6qbYvlplAfQDbXhg__&Key-Pair-Id=K3USGZIKWMDCSX" alt="製品外観図"
+                                         loading="lazy"
+                                         onerror="this.style.display='none'; if(this.nextElementSibling){this.nextElementSibling.style.display='block';}">
+                                    <div style="display:none;" class="image-error">
+                                        <p>画像を読み込めませんでした</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section">
+                            <h2>拡張アンテナシステム</h2>
+                            <div class="highlight-box">
+                                <h4>シューマン共振波照射エリアの拡張</h4>
+                                <p>本体①3.5mmアダプターと拡張アンテナ接続アダプターをコードで接続</p>
+                            </div>
+                            <div class="diagram">
+                                <img src="https://i.imgur.com/9OGO41x.jpg" alt="外部アンテナ接続図"
+                                     loading="lazy"
+                                     onerror="this.style.display='none'; if(this.nextElementSibling){this.nextElementSibling.style.display='block';}">
+                                <div style="display:none;" class="image-error">
+                                    <p>画像を読み込めませんでした</p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section">
+                            <h2>基本的な使用方法</h2>
+                            <h3>1. 初期セットアップ</h3>
+                            <div class="step-list">
+                                <ol>
+                                    <li>Type-C電源ケーブルを信号発生器に接続</li>
+                                    <li>電源投入後、自動的に7.83Hz信号の出力を開始</li>
+                                </ol>
+                            </div>
+                            <h3>2. 周波数調整手順</h3>
+                            <div class="highlight-box">
+                                <h4>設定モードへの入り方</h4>
+                                <p>電源投入時、デジタル表示部に現在の周波数が表示</p>
+                                <p>SETボタン（赤）を押す → 最後の小数点が点滅し設定モード開始</p>
+                            </div>
+                            <div class="highlight-box">
+                                <h4>周波数の変更</h4>
+                                <p>+ボタン（黄） : 周波数を増加</p>
+                                <p>-ボタン（青） : 周波数を減少</p>
+                                <p>長押し : 高速調整が可能</p>
+                            </div>
+                            <div class="highlight-box">
+                                <h4>調整ステップ</h4>
+                                <p>0.01-99.99Hz : 0.01Hz刻み</p>
+                                <p>100.0-999.9Hz : 0.1Hz刻み</p>
+                                <p>1000-9999Hz : 1Hz刻み</p>
+                            </div>
+                            <div class="highlight-box">
+                                <h4>設定の保存</h4>
+                                <p>設定完了後、再度<strong>③SETボタン</strong>を押すと設定モードを終了し、パラメータが保存されます。</p>
+                            </div>
+                        </section>
+                        <section class="section">
+                            <h2>高度な設定機能</h2>
+                            <div class="highlight-box">
+                                <h4>電源オフ後の設定保存</h4>
+                                <p><strong>操作</strong>: ④+ボタン（黄）を長押し → 「S-N」表示まで待つ</p>
+                                <p><strong>効果</strong>: 電源を切っても設定した周波数が保持</p>
+                            </div>
+                            <div class="highlight-box">
+                                <h4>シューマン共振波設定への復帰</h4>
+                                <p><strong>通常時</strong>: 電源再投入で自動的にデフォルト設定（7.83Hz）に復帰</p>
+                                <p><strong>保存機能有効時</strong>: ④+ボタン長押し → 「S-F」表示後、電源再投入</p>
+                            </div>
+                            <div class="highlight-box">
+                                <h4>デジタル表示の省電力設定</h4>
+                                <p><strong>表示オフ</strong>: ⑤-ボタン（青）長押し → 「S-P」表示 → 10秒後自動オフ</p>
+                                <p><strong>省電力解除</strong>: ⑤-ボタン長押し → 「N-P」表示まで待つ</p>
+                            </div>
+                        </section>
+                        <section class="section">
+                            <h2>トラブルシューティング</h2>
+                            <div class="highlight-box">
+                                <h4>Q1: 周波数が変更できない</h4>
+                                <p>A1: SETボタンを押して設定モードに入っているか確認してください（小数点が点滅）</p>
+                            </div>
+                            <div class="highlight-box">
+                                <h4>Q2: 電源を切ると設定がリセットされる</h4>
+                                <p>A2: +ボタンを長押しして「S-N」を表示させ、保存機能を有効にしてください</p>
+                            </div>
+                            <div class="highlight-box">
+                                <h4>Q3: 表示が自動で消える</h4>
+                                <p>A3: 省電力モードが有効です。-ボタンを長押しして「N-P」を表示させてください</p>
+                            </div>
+                        </section>
+                        <section class="section">
+                            <h2>安全上の注意</h2>
+                            <div class="warning-box">
+                                Type-C電源は5V仕様のものをご使用ください
+                            </div>
+                            <div class="warning-box">
+                                湿気や水分を避けて保管してください
+                            </div>
+                            <div class="warning-box">
+                                分解や改造は行わないでください
+                            </div>
+                        </section>
+                        <footer class="footer">
+                            <p><strong>製品に関するご質問やサポートが必要な場合は、ご契約診療所までお問い合わせください。</strong></p>
+                        </footer>
+                    </div>
+                `
+            };
+
+            // バージョン名マッピング
+            const versionNameMap = {
+                vr1: 'Vr.1',
+                vr2: 'Vr.2'
+            };
+
+            // 画像の遅延読み込みと最適化
+            function optimizeImages() {
+                const images = document.querySelectorAll('.manual-content img');
+                images.forEach(img => {
+                    img.addEventListener('error', function() {
+                        this.style.display = 'none';
+                        const errorDiv = this.nextElementSibling;
+                        if (errorDiv && errorDiv.classList.contains('image-error')) {
+                            errorDiv.style.display = 'block';
+                        }
+                    });
+                    img.addEventListener('load', function() {
+                        this.style.opacity = '1';
+                    });
+                });
+            }
+
+            // 要素の取得
+            const manualButton = document.getElementById('manualButton');
+            const manualOverlay = document.getElementById('manualOverlay');
+            const manualClose = document.getElementById('manualClose');
+            const manualDisplay = document.getElementById('manualDisplay');
+            const manualBack = document.getElementById('manualBack');
+            const manualContent = document.getElementById('manualContent');
+            const manualHeaderTitle = document.getElementById('manualHeaderTitle');
+            const versionCards = document.querySelectorAll('.version-card');
+
+            // 取扱説明書ボタンのクリック
+            if (manualButton) {
+                manualButton.addEventListener('click', () => {
+                    if (manualOverlay) {
+                        manualOverlay.style.display = 'flex';
+                    }
+                });
+            }
+
+            // 閉じるボタン
+            if (manualClose) {
+                manualClose.addEventListener('click', () => {
+                    manualOverlay.style.display = 'none';
+                });
+            }
+
+            // バージョンカードのクリック
+            versionCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const version = card.getAttribute('data-version');
+                    if (manualData[version]) {
+                        manualContent.innerHTML = manualData[version];
+                        manualHeaderTitle.textContent = `SynchroWave01 ${versionNameMap[version] ?? version} 取扱説明書`;
+                        manualOverlay.style.display = 'none';
+                        manualDisplay.style.display = 'flex';
+                        manualContent.scrollTop = 0;
+                        setTimeout(optimizeImages, 100);
+                    }
+                });
             });
-        });
 
-        // スクロールアニメーション
-        const observerOptions = {
-            root: null,
-            rootMargin: '50px',
-            threshold: 0.1
-        };
+            // 戻るボタン
+            if (manualBack) {
+                manualBack.addEventListener('click', () => {
+                    manualDisplay.style.display = 'none';
+                    manualOverlay.style.display = 'flex';
+                });
+            }
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // 初期状態設定とアニメーション監視
-        document.querySelectorAll('.cta-text').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
+            // オーバーレイの外側クリックで閉じる
+            if (manualOverlay) {
+                manualOverlay.addEventListener('click', (e) => {
+                    if (e.target === manualOverlay) {
+                        manualOverlay.style.display = 'none';
+                    }
+                });
+            }
         });
     </script>
+<style>
+/* -------- スマホ時、取扱説明書内のカードと画像を１列に -------- */
+@media (max-width:768px){
+  /* 機能カード＋画像を縦並びに */
+  .manual-content .panel-explanation{
+      display:block !important;          /* flex を無効化 */
+  }
+
+  /* 並び順を「画像 → 機能カード」にしたい場合は下２行を入れ替える */
+  .manual-content .device-image   {margin:0 0 25px 0 !important;}
+  .manual-content .function-cards {margin:0 !important;}
+}
+
+/* 超小型端末対策（念のため） */
+@media (max-width:480px){
+  .manual-content .diagram img,
+  .manual-content .device-image img{
+      max-height:200px !important;      /* 画像がハミ出す場合の防護策 */
+  }
+}
+@media (max-width:768px){
+  /* 画像は親の幅にフィットさせる */
+  .manual-content img{
+      max-width:100% !important;
+      height:auto   !important;
+      display:block !important;   /* 行間の余白も消す */
+  }
+}
+
+</style>
+
 </body>
-</html>
-
-            }
-        }
-</html>
-
 </html>
