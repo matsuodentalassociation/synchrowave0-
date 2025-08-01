@@ -7854,7 +7854,7 @@ body {
                     <h3 class="special-title">特典</h3>
                     <div class="special-content">
                         <div class="benefit-main-title">30日間完全無料体験</div>
-                        <div class="benefit-description">上質な睡眠を安定して実感いただける平均期間（60日）は完全無料</div>
+                        <div class="benefit-description">上質な睡眠を安定して実感いただける平均期間（30日間）は完全無料</div>
                         <div class="benefit-condition">効果を感じられない場合は費用は一切かかりません。</div>
                     </div>
                 </div>
@@ -7940,14 +7940,14 @@ body {
             <div class="version-selection">
                 <div class="version-card" data-version="vr1">
                     <div class="version-image">
-                        <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/137251442/XIMQ17r05ug6SDsc.PNG?Expires=1751991753&Signature=LRzti7-9afX0NsAjsKISyUQiVo5Z~mb5dtEM7~jlldaZ-j-~AsFRe03K0db10bax2yoUu0O98PBiMG8TN45bl4VTj5cj257~o5JpKuY66oCHxfD~H-1lCDhyd3SAZmc-4zLTA3DaxLuNus-rydcnN6IsfsiLOCNsN~xKeUeHdPrdPaFSMa6ftyidFJLqlXKpvYALt4QbednSZfqTp2J2ztClB9hw181yafuBwZdq58T-nqb8fm2UB0IdU5X26jqzP4EA6zVsl3KRAvbzcYP1KErEltNibFvJc4TYt8rg1xvbQqYECVJJoV9USEs8ypEYaoXrsbYbRjEkeEODnHylpA__&Key-Pair-Id=K3USGZIKWMDCSX" alt="SynchroWave01 Vr.1">
+                        <img src="https://i.imgur.com/rYHGZtR.png" alt="SynchroWave01 Vr.1">
                     </div>
                     <div class="version-name">SynchroWave01 Vr.1</div>
                     <div class="version-description">従来型モデル</div>
                 </div>
                 <div class="version-card" data-version="vr2">
                     <div class="version-image">
-                        <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/137251442/0aoYpobOPli6p8jM.PNG?Expires=1751991757&Signature=sLN~UThqa24bVYgK~6RSqpML8m3Lpyhp2jXzgLaAmtfumWO2Adrsj-GVSlUeK-pGq~k7HneQoKMXhiOW-dZrjDmeAo6k72qwrr9Am4mrFgG9KF47SUDIa5xJgN3bXu5T0JOS1x2dcmgH8oMMQK1bOf6fp2omnQko6MC2REcnNxfeOaom8MKcSJjh4cr6izTMaxJ5dWlkRMDbZBhcFuwdklrU~5HKKVdRSQbL9murASK5IBCcUMdQL3nNjquyWA7ECN-nf4VhjFvP6ixL-XSFMosaZ40kKv~1JJ65xz4iyntyf37KQpEkSFfE5BDK0hfigphOTjA3F054T9akSBBASA__&Key-Pair-Id=K3USGZIKWMDCSX" alt="SynchroWave01 Vr.2">
+                        <img src="https://i.imgur.com/Ijjt5sb.png" alt="SynchroWave01 Vr.2">
                     </div>
                     <div class="version-name">SynchroWave01 Vr.2</div>
                     <div class="version-description">最新型モデル</div>
@@ -8054,7 +8054,7 @@ body {
                                     </div>
                                 </div>
                                 <div class="device-image">
-                                    <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/137251442/j79UHwdCMJ6CEbZ7.PNG?Expires=1751991735&Signature=Sf0F8WOtTSSZej3QpRbhqkrmd5R6rUs-alxC3zFSpPP0bbx0fzkk~ErpZEd9OTBLwFBtf5vtV6e0lZw6AqqU~pHA8s4F-5M04Nyze8uYmrbATIraXt-kIOBq9ylaArANbZKLCoadgkJxbFGxvubnOQPtpvQjTYySOdbCM5VUqZk6unPKbSeY1EhAyhiZFi-EzZIxz3vMV6iDgesJDZWeW-~8t1Qr6z7sjsEt1H9-FJyOWtKqxeuYms4JJWmjS0U8JD6akNf38-OGMwPUgTVDk~yTnHwaTVbyEfyfqR1w~UUANDbxxnX7OAlmD4j6WsYedCqlPmpBoCRbaCMxOZMtlw__&Key-Pair-Id=K3USGZIKWMDCSX" alt="製品外観図" 
+                                    <img src="https://i.imgur.com/9L9g38y.png" alt="製品外観図" 
                                          loading="lazy"
                                          onerror="this.style.display='none'; if(this.nextElementSibling){this.nextElementSibling.style.display='block';}">
                                     <div style="display:none;" class="image-error">
@@ -8157,8 +8157,8 @@ body {
                             </div>
                         </section>
                         <footer class="footer">
-                            <p><strong>製品に関するご質問やサポートが必要な場合は、ご契約診療所までお問い合わせください。</strong></p>
-                            <p>シューマン共振についての詳細は「Schumann Resonance」で検索してください。</p>
+                            <p><strong>製品に関するご質問やサポートが必要な場合は、下記までお問い合わせください。</strong></p>
+                          <p>MDA松尾歯科技術研究所　千葉県市川市鬼高2-11-12-504 TEL050-37011346 mda.tribo@gmail.com</p>
                         </footer>
                     </div>
                 `,
@@ -8252,7 +8252,7 @@ body {
                                     </div>
                                 </div>
                                 <div class="device-image">
-                                    <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/137251442/rRwD37RRsBY7eGZA.PNG?Expires=1751991742&Signature=iDUGeLz~AvpN3JRzIifaHUerPAXIPWwuKY~hZzJXyCJ9rO4WMp6g4nGGsHrMzb5nYdhKHqXYyS4SrYlGHJvj9gvh3G0DW~bPyy0kT8Z7ho4ou8OWKEVgSaElu13B9W0yGyRdcN5SBy3p6a7WIV22Xdh2Sz2izUw-3hfcI4bo6ME1-tcpop-Igqi8KA6Y4SwbbYDFMYKmhHQqfE8faEmhydReL0SOAHqO4m1~zAiPlDZlBDzErQd0IYGjzTmA0qIH~zk-e3rbgH9iXF3h9uiD1emegQDYVqQz0O1~ZlQgSzr3~cpW79NkM2i3VKNngkG0hy~dfJ6qbYvlplAfQDbXhg__&Key-Pair-Id=K3USGZIKWMDCSX" alt="製品外観図"
+                                    <img src="https://i.imgur.com/HQKtAuh.png" alt="製品外観図"
                                          loading="lazy"
                                          onerror="this.style.display='none'; if(this.nextElementSibling){this.nextElementSibling.style.display='block';}">
                                     <div style="display:none;" class="image-error">
@@ -8354,7 +8354,8 @@ body {
                             </div>
                         </section>
                         <footer class="footer">
-                            <p><strong>製品に関するご質問やサポートが必要な場合は、ご契約診療所までお問い合わせください。</strong></p>
+                            <p><strong>製品に関するご質問やサポートが必要な場合は、下記までお問い合わせください。</strong></p>
+                          <p>MDA松尾歯科技術研究所　千葉県市川市鬼高2-11-12-504 TEL050-37011346 mda.tribo@gmail.com</p>
                         </footer>
                     </div>
                 `
